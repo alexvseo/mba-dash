@@ -1,5 +1,5 @@
-import app
-from app import dcc, html, Input, Output
+import dash
+from dash import dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
 
@@ -9,7 +9,7 @@ df = pd.DataFrame({
     "Vendas": [100, 80, 70, 120, 90, 1000]
 })
 
-app = app.Dash(__name__)
+app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.H1("Dashboard Interativo de Vendas"),
